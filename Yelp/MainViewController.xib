@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
+            <connections>
+                <outlet property="mapView" destination="Qap-Fq-VJK" id="HGg-oN-0sf"/>
+                <outlet property="tableView" destination="69c-t9-P0C" id="ey7-BT-Gsi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3A-Pd-idb">
+                    <rect key="frame" x="137" y="240" width="46" height="30"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="69c-t9-P0C">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qap-Fq-VJK">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Ee2-4G-dlO"/>
+                    </connections>
+                </mapView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="69c-t9-P0C" secondAttribute="bottom" id="2tF-6Y-Dcw"/>
+                <constraint firstAttribute="trailing" secondItem="69c-t9-P0C" secondAttribute="trailing" id="6zH-Xg-tvY"/>
+                <constraint firstItem="Qap-Fq-VJK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7ma-Vk-h4V"/>
+                <constraint firstAttribute="trailing" secondItem="Qap-Fq-VJK" secondAttribute="trailing" id="Cc3-ue-3Lm"/>
+                <constraint firstItem="Qap-Fq-VJK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Sg7-55-cx2"/>
+                <constraint firstItem="69c-t9-P0C" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="WQp-bt-J7H"/>
+                <constraint firstItem="69c-t9-P0C" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bla-N2-ep9"/>
+                <constraint firstAttribute="bottom" secondItem="Qap-Fq-VJK" secondAttribute="bottom" id="fuN-ue-ymA"/>
+            </constraints>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
